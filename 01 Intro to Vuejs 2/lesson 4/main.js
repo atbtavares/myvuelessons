@@ -21,19 +21,19 @@ var app = new Vue({
      sizes: [
         {
           sizeId: 2235,
-          sizeLenght: "Small"
+          sizeDescription: "Small"
         }, 
         {
           sizeId: 2236,
-          sizeLenght:"Medium"
+          sizeDescription:"Medium"
         },
         {
           sizeId: 2237,
-          sizeLenght: "Large"
+          sizeDescription: "Large"
         }, 
         {
           sizeId: 2238,
-          sizeLenght:"XL"
+          sizeDescription:"XL"
         }
       ]
    }

@@ -11,11 +11,13 @@ var app = new Vue({
      variants: [
        {
          variantId:2234,
-         variantColor: 'green'
+         variantColor: 'green',
+         variantImage:  './socks.jpg'
        },
        {
         variantId:2235,
-        variantColor: 'blue'
+        variantColor: 'blue',
+        variantImage: './socks-blue.jpg'
        }
      ],
      sizes: ['Small', 'Medium', 'Large', 'XL'],
@@ -28,6 +30,9 @@ var app = new Vue({
     rmFromCart: function(){
       if (this.cart != 0)
         this.cart -= 1
+    },
+    updateProductImage: function(variantImage){
+      this.image = variantImage
     }
   }
 })

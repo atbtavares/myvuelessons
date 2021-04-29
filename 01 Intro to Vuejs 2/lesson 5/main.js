@@ -24,6 +24,10 @@ var app = new Vue({
    methods: {
     addToCart: function(){
       this.cart += 1
+    },
+    rmFromCart: function(){
+      if (this.cart != 0)
+        this.cart -= 1
     }
   }
 })

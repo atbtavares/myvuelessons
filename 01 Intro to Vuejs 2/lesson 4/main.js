@@ -20,7 +20,7 @@ var app = new Vue({
      ],
      sizes: [
         {
-          sizeId: 2235,
+          sizeId: 2239,
           sizeDescription: "Small"
         }, 
         {

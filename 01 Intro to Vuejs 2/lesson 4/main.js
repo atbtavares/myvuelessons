@@ -17,7 +17,25 @@ var app = new Vue({
         variantId:2235,
         variantColor: 'blue'
        }
-     ]
+     ],
+     sizes: [
+        {
+          sizeId: 2235,
+          sizeLenght: "Small"
+        }, 
+        {
+          sizeId: 2236,
+          sizeLenght:"Medium"
+        },
+        {
+          sizeId: 2237,
+          sizeLenght: "Large"
+        }, 
+        {
+          sizeId: 2238,
+          sizeLenght:"XL"
+        }
+      ]
    }
 })
 

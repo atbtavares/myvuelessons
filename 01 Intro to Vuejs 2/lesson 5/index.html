@@ -1,0 +1,53 @@
+<!doctype html>
+	<head>
+  		<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+  		<link rel="stylesheet" type="text/css" href="style.css">
+      <meta charset="utf-8"/>
+	</head>
+
+  <body>
+
+    <div class="nav-bar"></div>
+
+    <div id="app">
+
+     <div class="product">
+
+       <div class="product-image">
+           <img :src="image" :alt="altText" />
+       </div>
+      
+       <div class="product-info">
+           <h1>{{ product }}</h1>
+           <p v-show="onSale">On Sale!</p>
+           <p v-show="outStock">but for the moment it is out of stock!</p>
+           
+            <ul>
+              <li v-for="detail in details">{{ detail }}</li>
+            </ul>
+
+            <div v-for="variant in variants" :key="variant.variantId">
+              <p>{{ variant.variantColor }}</p>
+            </div>
+
+            <div v-for="size in sizes" :key="size.sizeId">
+              <p>{{ size.sizeDescription }}</p>
+            </div>
+
+            <button v-on:click="cart += 1"> Add to Cart</button>
+
+            <div class="cart">
+              <p>Cart({{cart}})</p>
+            </div>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+
+ <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+ 
+ <script src="main.js"></script>
+
+</html>

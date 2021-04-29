@@ -29,14 +29,17 @@
            </ul>
 
            <div class="color-box"
-                v-for="variant in variants" 
-                :key="variant.variantId"
-                :style="{ backgroundColor: variant.variantColor }"
-                @mouseover="updateProductImage(variant.variantImage)"
-                >
+              v-for="variant in variants" 
+              :key="variant.variantId"
+              :style="{ backgroundColor: variant.variantColor }"
+              @mouseover="updateProductImage(variant.variantImage)">
            </div>
             
-           <button @click="addToCart">Add to Cart</button>
+           <button @click="addToCart"
+               :disabled="!inStock"
+               :class="{ disabledButton: !inStock}">
+              Add to Cart
+            </button>
 
            <button @click="rmFromCart">Remove from Cart</button>
 
